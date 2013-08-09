@@ -18,11 +18,11 @@ var showUsage = function () {
 };
 
 var checkArgs = function (args) {
-    if (args.length !== 4 && !(args.length === 3 && args[2] === 'help')) {
+    if (args.length !== 3) {
         return false;
     }
 
-    if (! _.contains(cmds, args[2])) {
+    if (! _.contains(cmds, args[1])) {
         return false;
     }
 
@@ -36,8 +36,8 @@ if (!checkArgs(args)) {
     process.exit(1);
 }
 
-var cmd = args[2],
-    root = typeof args[3] !== 'undefined' ? args[3] : '';
+var cmd = args[1],
+    root = typeof args[2] !== 'undefined' ? args[2] : '';
 
 switch (cmd) {
     case 'help':

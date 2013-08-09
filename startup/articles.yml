@@ -1,17 +1,19 @@
 - id: first-post
-  title: 第一篇文章 
+  title: 江城子 
   postedOn: !!str 2013-01-02
-  author: 你的名字
+  author: 苏轼
   tags: 
-    - 标签1
-    - 标签2
-  abstract: 文章摘要 
+    - 宋词
+    - 苏轼
+    - papery
+  abstract: 十年生死两茫茫，不思量，自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面，鬓如霜。夜来幽梦忽还乡。小轩窗，正梳妆。相顾无言，惟有泪千行。料得年年肠断处：明月夜，短松冈。
 
 - id: second-post
-  title: 第二篇文章 
+  title: 代码及数学公式示例 
   postedOn: !!str 2013-01-01
-  author: 你的名字
+  author: papery
   tags: 
-    - 标签1
-    - 标签2
-  abstract: 文章摘要 
+    - 代码
+    - 数学公式
+    - papery
+  abstract: 这篇文章展示了如何在papery中使用代码和数学公式。 

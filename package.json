@@ -5,7 +5,7 @@
   "bin" : {
       "pap-create": "./bin/papery-create.js",
       "pap-build":  "./bin/papery-build.js",
-      "pap-server":  "./bin/papery-server.js"
+      "pap-server": "./bin/papery-server.js"
   },
   "dependencies": {
     "marked":     ">=0.2.8",

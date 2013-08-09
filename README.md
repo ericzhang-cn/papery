@@ -12,7 +12,7 @@ npm install -g papery
 
 ```bash
 pap-create blog
-pap-build index blog
+pap-build all blog
 pap-server blog
 ```
 

@@ -12,5 +12,6 @@
   postedOn: !!str 2013-01-01
   author: 你的名字
   tags: 
-    - 标签3
-    - 标签4
+    - 标签1
+    - 标签2
+  abstract: 文章摘要 

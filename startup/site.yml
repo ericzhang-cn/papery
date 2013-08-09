@@ -1,0 +1,25 @@
+title: 博客标题
+subtitle: 博客副标题
+link: 博客URL
+meta:
+  description: 页面meta中的description
+  keywords: !!seq
+    - 关键词1
+    - 关键词2
+    - 关键词3
+  author: 页面meta中的author
+master:
+  name: 博客主
+  about: 个人简介
+  email: 邮箱
+rss:
+  title: RSS源标题
+  desc: RSS源描述
+  lang: zh-cn
+  max: 10
+copyright:
+  owner: 版权所有方
+  beginYear: 2011
+  endYear: 2013
+  ICP: 备案号
+theme: default

@@ -1,0 +1,7 @@
+- label: google
+  href: https://google.com
+  target: _self
+
+- label: github
+  href: https://github.com
+  target: _blank

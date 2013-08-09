@@ -1,0 +1,30 @@
+<% include inc/header %>
+<div id="main">
+    <div id="main-inner">
+        <div id="topnav">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li class="sep"> | </li>
+                <li><a href="/tag.html">标签</a></li>
+                <% include inc/navbar %>
+            </ul>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="article-title">
+            <a href="<%= article.link %>"><%= article.title %></a>
+        </div>
+        <div id="article-meta">
+            作者 <%= article.author %> | 发布于 <%= article.postedOn %>
+        </div>
+        <div id="article-tags">
+        <% article.tags.forEach(function (tag) { %>
+        <a class="tag" href="/tag.html#<%= tag %>"><%= tag %></a>
+        <% }); %>
+        </div>
+        <div id="article-content">
+            <%- article.content %>
+        </div>
+        <% include inc/article_footer_plugin %>
+    </div>
+</div>
+<% include inc/footer %>

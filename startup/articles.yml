@@ -1,0 +1,16 @@
+- id: first-post
+  title: 第一篇文章 
+  postedOn: !!str 2013-01-02
+  author: 你的名字
+  tags: 
+    - 标签1
+    - 标签2
+  abstract: 文章摘要 
+
+- id: second-post
+  title: 第二篇文章 
+  postedOn: !!str 2013-01-01
+  author: 你的名字
+  tags: 
+    - 标签3
+    - 标签4

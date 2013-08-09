@@ -1,0 +1,23 @@
+{
+  "name": "papery",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {
+    "marked":     ">=0.2.8",
+    "moment":     ">=2.0.0",
+    "underscore": ">=1.4.4",
+    "js-yaml":    ">=2.1.0",
+    "ejs":        ">=0.8.4",
+    "winston":    ">=0.7.2",
+    "ncp":        ">=0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ericzhang-cn/papery.git"
+  },
+  "author": "Eric Zhang",
+  "license": "BSD"
+}

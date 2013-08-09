@@ -1,0 +1,28 @@
+<% include inc/header %>
+<div id="main">
+    <div id="main-inner">
+        <div id="topnav">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li class="sep"> | </li>
+                <li><a href="/tag.html">标签</a></li>
+                <% include inc/navbar %>
+            </ul>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="tag-cloud">
+        <% tags.forEach(function (tag) { %>
+        <a href="/tag.html#<%= tag.label %>"><%= tag.label %><span class="count">×<%= tag.count %></span></a>
+        <% }) %>
+        <div style="clear:both;"></div></div>
+        <div id="tag-index">
+        <% tags.forEach(function (tag) { %>
+            <h1><a name="<%= tag.label %>"><%= tag.label %></a></h1>
+            <% tag.articles.forEach(function (ar) { %>
+            <p><a href="/articles/<%= ar.id %>.html"><%= ar.title %></a></p>
+            <% }) %>
+        <% }) %>
+        </div>
+    </div>
+</div>
+<% include inc/footer %>

@@ -150,3 +150,47 @@ theme: default
 ```
 
 其中每个字段的意义已经标示清楚，按照自己的需求修改即可。
+
+## 写文章
+
+papery中的文章有两部分组成：文章配置及元文本。文章配置用于告诉papery的构建系统文章
+的一些信息，而元文本则是文章的内容。
+
+### 文章配置
+
+文章配置文件为articles.yml。其中一篇文章的配置格式如下：
+
+```yaml
+- id: post-id
+  title: 文章标题 
+  postedOn: !!str 2013-01-01
+  author: 作者
+  tags: 
+    - 标签1
+    - 标签2
+  abstract: 摘要内容 
+```
+
+注意其中最重要的配置项是id。id作为文章的唯一标识，要求在整个articles.yml配置的所有
+文章中唯一，并且只能包含小写英文字母、数字和中横“-”。
+
+id不但指定了元文本的名称，而且会成为文章permalink的。建议的id写法是文章的英文标题
+按单词用“-”连接。例如“papery-quickstart”。
+
+### 元文本
+
+元文本是文章的内容，papery根据元文本和文章配置最终生成文章页面。papery使用
+[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)，
+(简称gfm)作为元文本书写格式。gfm基本保持了标准markdown的功能，同时增加了一些新的特性，
+文档见[这里](https://help.github.com/articles/github-flavored-markdown)。
+
+一篇元文本是放在articles目录下以“md”为后缀名的文件，注意元文本的名字对应配置中
+id字段的名字。例如“id: papery-quickstart”的文章对应的元文本为articles/papery-quickstart.md。
+
+你可以用任何文本编辑器书写元文本。如果某些地方markdown的表达能力不够，你可以直接插入html代码。
+papery元文本支持markdown与html混编。
+
+## 写独立页面
+
+博客中有时需要一些如“关于”等独立页面。独立页面的编写与文章非常类似，也是
+用yaml编写配置文件，用gfm编写元文本。不同的是独立页面的配置项只有id和title。

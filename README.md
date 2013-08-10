@@ -83,3 +83,36 @@ pap-server blog_root_directory
 ```
 
 执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入http://localhost:8001/即可访问。
+
+## 目录结构及URL
+
+### 目录结构
+
+一个papery博客的目录结构如下
+
+```
+root
+ | - articles.yml
+ | - ext.yml
+ | - navbar.yml
+ | - pages.yml
+ | - site.yml
+ | - index.html
+ | - rss.xml
+ | - tag.html
+ | - articles
+      |- post1.md
+      |- post1.html
+      |- post2.md
+      |- post2.html
+ | - pages
+      |- page1.md
+      |- page1.html
+      |- page2.md
+      |- page2.html
+ | - assets
+      |- vendor
+      |- themes
+          |- default
+ | - templates 
+```

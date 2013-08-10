@@ -194,3 +194,61 @@ papery元文本支持markdown与html混编。
 
 博客中有时需要一些如“关于”等独立页面。独立页面的编写与文章非常类似，也是
 用yaml编写配置文件，用gfm编写元文本。不同的是独立页面的配置项只有id和title。
+
+## 配置导航菜单
+
+papery默认的导航菜单项只有“首页”和“标签”。如果要增加新的导航菜单项，则需要在
+navbar.yml中配置。例如我们配置两个导航菜单，一个到博客的RSS订阅源，一个到github
+首页，则可以如下配置navbar.yml
+
+```yaml
+- label: 订阅
+  href: /rss.xml
+  target: _self
+
+- label: github
+  href: https://github.com/ericzhang-cn/papery
+  target: _blank
+```
+
+注意target配置项可以配置此导航链接是在本窗口打开还是在新窗口打开。
+
+## 代码高亮
+
+papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)
+实现。
+
+只需将在元文本中插入class为prettyprint的pre标签，如：
+
+```html
+<pre class="prettyprint">
+#include&lt;stdio.h&gt;
+
+int main(int argc, char** argv) {
+    printf("%s\n", "Hello, World!");
+}
+</pre>
+```
+
+即可实现代码高亮，代码语言会自动被识别。
+
+注意代码内的“<”，“>”和“&”要做html escape。
+
+## 数学公式
+
+papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持LaTeX格式的数学公式渲染。
+不过由于反斜杠“\”和下划线“_”在markdown中有特殊意义，因此需要转义。
+
+### 内联数学公式
+
+内联数学公式使用“\(”和“\)”包裹，渲染后内联于行内。例如：
+
+\\(e^{i\\pi}+1=0\\)
+
+注意反斜杠需要转义。
+
+### 单行数学公式
+
+单行数学公式使用“\[”和“\]”包裹，渲染后单独占一行，例如：
+
+\\[e^{i\\pi}+1=0\\]

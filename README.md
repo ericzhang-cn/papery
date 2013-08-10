@@ -207,7 +207,7 @@ navbar.yml中配置。例如我们配置两个导航菜单，一个到博客的R
   target: _self
 
 - label: github
-  href: https://github.com/ericzhang-cn/papery
+  href: https://github.com
   target: _blank
 ```
 
@@ -241,7 +241,7 @@ papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持L
 
 ### 内联数学公式
 
-内联数学公式使用“\(”和“\)”包裹，渲染后内联于行内。例如：
+内联数学公式使用“\\(”和“\\)”包裹，渲染后内联于行内。例如：
 
 ```
 \\(e^{i\\pi}+1=0\\)
@@ -251,7 +251,7 @@ papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持L
 
 ### 单行数学公式
 
-单行数学公式使用“\[”和“\]”包裹，渲染后单独占一行，例如：
+单行数学公式使用“\\[”和“\\]”包裹，渲染后单独占一行，例如：
 
 ```
 \\[e^{i\\pi}+1=0\\]

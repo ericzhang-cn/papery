@@ -256,3 +256,103 @@ papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持L
 ```
 \\[e^{i\\pi}+1=0\\]
 ```
+
+# 高级使用
+
+## 扩展配置及自定义模板
+
+### 自定义模板
+
+papery使用[ejs](https://github.com/visionmedia/ejs)作为模板引擎。模板文件全部放在
+templates目录下，后缀名为ejs。对于有html基础的用户可以自己对模板进行定制。
+
+## 扩展配置项绑定
+
+除了固定配置项外，papery还提供了一个ext.yml用于用户自定义扩展配置。用户在这个yaml
+中可以输入自己的配置，然后在模板中通过ext命名空间绑定内容。
+
+例如，在ext.yml中输入：
+
+```yaml
+foo: bar
+```
+
+则在模板文件中用
+
+```html
+<%= ext.foo %>
+```
+
+则此处内容会被替换为“bar”。结合yaml的数据结构及ejs模板引擎，有编程基础的用户可以灵活
+的按需定制。
+
+## 自定义主题
+
+papery的模板中没有表现相关的东西，最终的外观表现依赖于皮肤主题。皮肤主题存放在
+assets/themes/目录下，子目录名称就是主题名称。当前启用的主题在site.yml的theme配置项
+中配置。
+
+papery默认带一个名叫“default”的主题。
+
+自定义主题的主文件是assets/themes/[theme_name]/main.css文件。用户可以通过写不同的
+main.css文件放在相应目录下，然后修改site.yml来启用不同主题。
+
+如需引入额外css、js或图片文件，请使用下文提到的插件模式。
+
+## 插件
+
+papery通过在模板文件中引入不同的模板片段启用不同插件。启用插件的方式是将相关代码
+片段放到相关的注入点模板文件即可。默认有三个注入点：
+
+### header\_plugin
+
+header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到
+网站所有页面的<head>部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。
+如皮肤主题需要的额外css。
+
+### footer\_plugin
+
+footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到
+网站所有页面的</body>前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如
+网站统计代码。
+
+papery默认启用的mathjax插件在这里引入。
+
+### article\_footer\_plugin
+
+article\_footer\_plugin的模板文件为templates/inc/article\_footer_plugin.ejs。这个
+文件的内容被包含到所有文章页面的底部。可以用于引入评论、分享等于文章相关的插件。
+
+如上述位置不满足要求，用户也可以通过自定义模板功满足需求。
+
+### 常用插件推荐
+
+#### 评论
+
++ 多说 - http://duoshuo.com
++ 友言 - http://www.uyan.cc
++ 畅言 - http://changyan.sohu.com
+
+#### 社会化分享
+
++ JiaThis - http://www.jiathis.com
++ bShare - http://www.bshare.cn
++ 百度分享 - http://share.baidu.com
+
+#### 推荐系统
+
++ 友荐 - http://www.ujian.cc
+
+#### 统计
+
++ Google Analytics - http://www.google.com/analytics
++ 百度统计 - http://tongji.baidu.com
++ 量子恒道 - http://www.linezing.com
++ 腾讯分析 - http://ta.qq.com
+
+# 谁在使用papery
+
++ CodingLabs - http://blog.codinglabs.org
++ 苏剑涛的Blog - http://www.sujiantao.com
+
+如果你也使用了papery并且想出现在这里，请[联系我](mailto:ericzhang.buaa@gmail.com)

@@ -62,7 +62,7 @@ pap-create blog_root_directory
 通过pap-create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。pap-build用于根据配置和元文本生成web内容。使用方法为：
 
 ```bash
-pap-server cmd blog_root_directory
+pap-build cmd blog_root_directory
 ```
 
 其中cmd列表如下：

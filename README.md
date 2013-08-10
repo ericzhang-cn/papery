@@ -84,35 +84,69 @@ pap-server blog_root_directory
 
 执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入http://localhost:8001/即可访问。
 
-## 目录结构及URL
-
-### 目录结构
+## 目录结构
 
 一个papery博客的目录结构如下
 
-```
+```bash
 root
- | - articles.yml
- | - ext.yml
- | - navbar.yml
- | - pages.yml
- | - site.yml
- | - index.html
- | - rss.xml
- | - tag.html
- | - articles
-      |- post1.md
-      |- post1.html
-      |- post2.md
-      |- post2.html
- | - pages
-      |- page1.md
-      |- page1.html
-      |- page2.md
-      |- page2.html
- | - assets
-      |- vendor
-      |- themes
-          |- default
- | - templates 
+ | - articles.yml #文章配置
+ | - ext.yml      #用户自定义扩展配置
+ | - navbar.yml   #导航菜单配置
+ | - pages.yml    #独立页面配置
+ | - site.yml     #站点主配置
+ | - index.html   #首页（自动生成）
+ | - rss.xml      #RSS订阅源（自动生成）
+ | - tag.html     #标签索引页（自动生成）
+ | - articles #放置文章的目录
+      |- post1.md    #post1元文本
+      |- post1.html  #post1文章页面（自动生成）
+      |- post2.md    #post2元文本
+      |- post2.html  #post2文章页面（自动生成）
+ | - pages #放置独立页面的目录
+      |- page1.md    #page1元文本
+      |- page1.html  #page1独立页面（自动生成）
+ | - assets #资源目录
+      |- vendor  #第三方资源
+      |- themes  #主题
+          |- default #默认主题
+ | - templates #模板目录
 ```
+
+## 配置站点
+
+站点的总配置文件是site.yml。papery使用[yaml](http://www.yaml.org/)格式作为配置文件格式。
+由于yaml的配置格式非常简洁且具有较高的自解释能力，因此即使你没接触过yaml也可以很快理解
+配置的意义。
+
+通过pap-create创建的默认site.yml内容如下：
+
+```yaml
+title: 博客标题
+subtitle: 博客副标题
+link: 博客URL
+meta:
+  description: 页面meta中的description
+  keywords: !!seq
+    - 关键词1
+    - 关键词2
+    - 关键词3
+  author: 页面meta中的author
+master:
+  name: 博客主
+  about: 个人简介
+  email: 邮箱
+rss:
+  title: RSS源标题
+  desc: RSS源描述
+  lang: zh-cn
+  max: 10
+copyright:
+  owner: 版权所有方
+  beginYear: 2011
+  endYear: 2013
+  ICP: 备案号
+theme: default
+```
+
+其中每个字段的意义已经标示清楚，按照自己的需求修改即可。

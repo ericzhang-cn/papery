@@ -29,17 +29,19 @@ pap-server myblog
 + 自带代码高亮及LaTeX数学公式支持
 + 可通过插件支持评论、分享、站内推荐等功能
 
-# 详细文档
+# 使用说明
 
 ## 安装
 
-首先要保证机器上安装有[nodejs](http://nodejs.org/)，及[npm](https://npmjs.org/)。
+首先要保证机器上安装有[nodejs](http://nodejs.org/)及[npm](https://npmjs.org/)。
 
-执行
+然后执行
 
 ```bash
 npm install -g papery
 ```
+
+即可完成安装。
 
 ## 命令行工具
 
@@ -60,10 +62,10 @@ pap-create blog_root_directory
 通过pap-create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。pap-build用于根据配置和元文本生成web内容。使用方法为：
 
 ```bash
-pap-server command blog_root_directory
+pap-server cmd blog_root_directory
 ```
 
-其中command列表如下：
+其中cmd列表如下：
 
 + all - 构建所有页面
 + index - 只构建index.html

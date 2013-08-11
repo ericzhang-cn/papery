@@ -22,7 +22,7 @@
     "chai":  ">=1.7.2"
   },
   "scripts": {
-    "test": "mocha ./test/tests.js -R Spec"
+    "test": "mocha ./test/tests.js -R spec"
   },
   "repository": {
     "type": "git",

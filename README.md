@@ -1,4 +1,4 @@
-papery - 献给所有简洁控的极客范博客系统
+papery - 献给所有简洁控的博客系统
 
 # 一分钟生成自己的博客
 
@@ -116,8 +116,7 @@ root
 ## 配置站点
 
 站点的总配置文件是site.yml。papery使用[yaml](http://www.yaml.org/)格式作为配置文件格式。
-由于yaml的配置格式非常简洁且具有较高的自解释能力，因此即使你没接触过yaml也可以很快理解
-配置的意义。
+由于yaml的配置格式非常简洁且具有较高的自解释能力，因此即使你没接触过yaml也可以很快理解配置的意义。
 
 通过pap-create创建的默认site.yml内容如下：
 
@@ -153,8 +152,7 @@ theme: default
 
 ## 写文章
 
-papery中的文章有两部分组成：文章配置及元文本。文章配置用于告诉papery的构建系统文章
-的一些信息，而元文本则是文章的内容。
+papery中的文章有两部分组成：文章配置及元文本。文章配置用于告诉papery的构建系统文章的一些信息，而元文本则是文章的内容。
 
 ### 文章配置
 
@@ -171,35 +169,29 @@ papery中的文章有两部分组成：文章配置及元文本。文章配置�
   abstract: 摘要内容 
 ```
 
-注意其中最重要的配置项是id。id作为文章的唯一标识，要求在整个articles.yml配置的所有
-文章中唯一，并且只能包含小写英文字母、数字和中横“-”。
+注意其中最重要的配置项是id。id作为文章的唯一标识，要求在整个articles.yml配置的所有文章中唯一，并且只能包含小写英文字母、数字和中横“-”。
 
-id不但指定了元文本的名称，而且会成为文章permalink的。建议的id写法是文章的英文标题
-按单词用“-”连接。例如“papery-quickstart”。
+id不但指定了元文本的名称，而且会成为文章permalink的。建议的id写法是文章的英文标题按单词用“-”连接。例如“papery-quickstart”。
 
 ### 元文本
 
-元文本是文章的内容，papery根据元文本和文章配置最终生成文章页面。papery使用
-[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)，
-(简称gfm)作为元文本书写格式。gfm基本保持了标准markdown的功能，同时增加了一些新的特性，
-文档见[这里](https://help.github.com/articles/github-flavored-markdown)。
+元文本是文章的内容，papery根据元文本和文章配置最终生成文章页面。papery使用[GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)(简称gfm)作为元文本书写格式。gfm基本保持了标准markdown的功能，同时增加了一些新的特性，文档见[这里](https://help.github.com/articles/github-flavored-markdown)。
 
-一篇元文本是放在articles目录下以“md”为后缀名的文件，注意元文本的名字对应配置中
-id字段的名字。例如“id: papery-quickstart”的文章对应的元文本为articles/papery-quickstart.md。
+一篇元文本是放在articles目录下以“md”为后缀名的文件，注意元文本的名字对应配置中id字段的名字。例如“id: papery-quickstart”的文章对应的元文本为articles/papery-quickstart.md。
 
-你可以用任何文本编辑器书写元文本。如果某些地方markdown的表达能力不够，你可以直接插入html代码。
-papery元文本支持markdown与html混编。
+你可以用任何文本编辑器书写元文本。如果某些地方markdown的表达能力不够，你可以直接插入html代码。papery元文本支持markdown与html混编。
 
 ## 写独立页面
 
-博客中有时需要一些如“关于”等独立页面。独立页面的编写与文章非常类似，也是
-用yaml编写配置文件，用gfm编写元文本。不同的是独立页面的配置项只有id和title。
+博客中有时需要一些如“关于”等独立页面。独立页面的编写与文章非常类似，也是用yaml编写配置文件，用gfm编写元文本。
+
+独立页面的配置文件为pages.yml，元文本放在pages/目录下。
+
+独立页面的配置项只有id和title，同样通过id关联配置项和元文本。
 
 ## 配置导航菜单
 
-papery默认的导航菜单项只有“首页”和“标签”。如果要增加新的导航菜单项，则需要在
-navbar.yml中配置。例如我们配置两个导航菜单，一个到博客的RSS订阅源，一个到github
-首页，则可以如下配置navbar.yml
+papery默认的导航菜单项只有“首页”和“标签”。如果要增加新的导航菜单项，则需要在navbar.yml中配置。例如我们配置两个导航菜单，一个到博客的RSS订阅源，一个到github首页，则可以如下配置navbar.yml
 
 ```yaml
 - label: 订阅
@@ -215,8 +207,7 @@ navbar.yml中配置。例如我们配置两个导航菜单，一个到博客的R
 
 ## 代码高亮
 
-papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)
-实现。
+papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)实现。
 
 只需将在元文本中插入class为prettyprint的pre标签，如：
 
@@ -236,8 +227,7 @@ int main(int argc, char** argv) {
 
 ## 数学公式
 
-papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持LaTeX格式的数学公式渲染。
-不过由于反斜杠“\”和下划线“_”在markdown中有特殊意义，因此需要转义。
+papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持LaTeX格式的数学公式渲染。不过由于反斜杠“\”和下划线“_”在markdown中有特殊意义，因此需要转义。
 
 ### 内联数学公式
 
@@ -263,13 +253,11 @@ papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持L
 
 ### 自定义模板
 
-papery使用[ejs](https://github.com/visionmedia/ejs)作为模板引擎。模板文件全部放在
-templates目录下，后缀名为ejs。对于有html基础的用户可以自己对模板进行定制。
+papery使用[ejs](https://github.com/visionmedia/ejs)作为模板引擎。模板文件全部放在templates目录下，后缀名为ejs。对于有html基础的用户可以自己对模板进行定制。
 
 ## 扩展配置项绑定
 
-除了固定配置项外，papery还提供了一个ext.yml用于用户自定义扩展配置。用户在这个yaml
-中可以输入自己的配置，然后在模板中通过ext命名空间绑定内容。
+除了固定配置项外，papery还提供了一个ext.yml用于用户自定义扩展配置。用户在这个yaml中可以输入自己的配置，然后在模板中通过ext命名空间绑定内容。
 
 例如，在ext.yml中输入：
 
@@ -283,47 +271,37 @@ foo: bar
 <%= ext.foo %>
 ```
 
-则此处内容会被替换为“bar”。结合yaml的数据结构及ejs模板引擎，有编程基础的用户可以灵活
-的按需定制。
+则此处内容会被替换为“bar”。结合yaml的数据结构及ejs模板引擎，有编程基础的用户可以灵活的按需定制。
 
 ## 自定义主题
 
-papery的模板中没有表现相关的东西，最终的外观表现依赖于皮肤主题。皮肤主题存放在
-assets/themes/目录下，子目录名称就是主题名称。当前启用的主题在site.yml的theme配置项
-中配置。
+papery的模板中没有表现相关的东西，最终的外观表现依赖于皮肤主题。皮肤主题存放在assets/themes/目录下，子目录名称就是主题名称。当前启用的主题在site.yml的theme配置项中配置。
 
 papery默认带一个名叫“default”的主题。
 
-自定义主题的主文件是assets/themes/[theme_name]/main.css文件。用户可以通过写不同的
-main.css文件放在相应目录下，然后修改site.yml来启用不同主题。
+自定义主题的主文件是assets/themes/[theme_name]/main.css文件。用户可以通过写不同的main.css文件放在相应目录下，然后修改site.yml来启用不同主题。
 
 如需引入额外css、js或图片文件，请使用下文提到的插件模式。
 
 ## 插件
 
-papery通过在模板文件中引入不同的模板片段启用不同插件。启用插件的方式是将相关代码
-片段放到相关的注入点模板文件即可。默认有三个注入点：
+papery通过在模板文件中引入不同的模板片段启用不同插件。启用插件的方式是将相关代码片段放到相关的注入点模板文件即可。默认有三个注入点：
 
 ### header\_plugin
 
-header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到
-网站所有页面的<head>部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。
-如皮肤主题需要的额外css。
+header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到网站所有页面的<head></head>部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。如皮肤主题需要的额外css。
 
 ### footer\_plugin
 
-footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到
-网站所有页面的</body>前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如
-网站统计代码。
+footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到网站所有页面的</body>前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如网站统计代码。
 
 papery默认启用的mathjax插件在这里引入。
 
 ### article\_footer\_plugin
 
-article\_footer\_plugin的模板文件为templates/inc/article\_footer_plugin.ejs。这个
-文件的内容被包含到所有文章页面的底部。可以用于引入评论、分享等于文章相关的插件。
+article\_footer\_plugin的模板文件为templates/inc/article\_footer_plugin.ejs。这个文件的内容被包含到所有文章页面的底部。可以用于引入评论、分享等于文章相关的插件。
 
-如上述位置不满足要求，用户也可以通过自定义模板功满足需求。
+如上述位置不满足需求，用户也可以通过自定义模板方式自己定制页面。
 
 ### 常用插件推荐
 

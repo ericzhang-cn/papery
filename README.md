@@ -289,11 +289,11 @@ papery通过在模板文件中引入不同的模板片段启用不同插件。�
 
 ### header\_plugin
 
-header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到网站所有页面的<head></head>部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。如皮肤主题需要的额外css。
+header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到网站所有页面的head部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。如皮肤主题需要的额外css。
 
 ### footer\_plugin
 
-footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到网站所有页面的</body>前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如网站统计代码。
+footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到网站所有页面的body部分结束前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如网站统计代码。
 
 papery默认启用的mathjax插件在这里引入。
 

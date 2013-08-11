@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ericzhang-cn/papery.png)](https://travis-ci.org/ericzhang-cn/papery])
+
 papery - create your simple, fast & elegant blog with plain text.
 
 # 一分钟生成自己的博客
@@ -31,17 +33,21 @@ pap-server myblog
 
 # 使用说明
 
-## 安装
+## 安装及升级
 
 首先要保证机器上安装有[nodejs](http://nodejs.org/)及[npm](https://npmjs.org/)。
 
-然后执行
+### 安装
 
 ```bash
 npm install -g papery
 ```
 
-即可完成安装。
+### 升级
+
+```bash
+npm update -g
+```
 
 ## 命令行工具
 

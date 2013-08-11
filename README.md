@@ -1,4 +1,4 @@
-papery - create your simple, fast & elegance blog with plain text.
+papery - create your simple, fast & elegant blog with plain text.
 
 # 一分钟生成自己的博客
 

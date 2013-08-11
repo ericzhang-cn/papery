@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 var _ = require('underscore'),
-    connect = require('connect'),
-    winston = require('winston');
+    connect = require('connect');
+
+var log4js = require('log4js'),
+    logger = log4js.getLogger();
 
 var showUsage = function () {
     console.log('usage: papery-server blog_root_directory');
@@ -26,4 +28,4 @@ connect.createServer(
     connect.static(args[1])
 ).listen(8001);
 
-winston.log('info', 'server已启动，请通过http://localhost:8001/访问您的blog');
+logger.info('server已启动，请通过http://localhost:8001/访问您的blog');

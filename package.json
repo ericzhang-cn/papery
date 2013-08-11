@@ -1,6 +1,6 @@
 {
   "name": "papery",
-  "version": "0.1.6",
+  "version": "0.1.8-1",
   "description": "create your simple, fast & elegant blog with plain text",
   "bin" : {
       "pap-create": "./bin/papery-create.js",
@@ -13,7 +13,7 @@
     "underscore": ">=1.4.4",
     "js-yaml":    ">=2.1.0",
     "ejs":        ">=0.8.4",
-    "winston":    ">=0.7.2",
+    "log4js":     ">=0.6.7",
     "ncp":        ">=0.4.2",
     "connect":    ">=2.8.4"
   },

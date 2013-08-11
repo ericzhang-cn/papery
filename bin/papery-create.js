@@ -2,8 +2,10 @@
 
 var _ = require('underscore'),
     fs = require('fs'),
-    winston =  require('winston'),
     ncp = require('ncp').ncp;
+
+var log4js = require('log4js'),
+    logger = log4js.getLogger();
 
 var showUsage = function () {
     console.log('usage: papery-create blog_root_directory');
@@ -25,7 +27,7 @@ if (!checkArgs(args)) {
 
 var startup = __dirname + '/../startup';
 if (!fs.existsSync(startup)) {
-    winston.log('error', '找不到startup模板，重新安装papery可修复此问题');
+    logger.error('找不到startup模板，重新安装papery可修复此问题');
     process.exit(1);
 }
 
@@ -34,10 +36,10 @@ var src = startup,
 
 ncp(src, dest, function (err) {
     if (err) {
-        winston.log('error', '无法创建blog');
-        winston.log('error', err);
+        logger.error('无法创建blog');
+        logger.error(err);
         process.exit(1);
     }
 
-    winston.log('info', '恭喜！在 %s 成功诞生了一个新的blog', dest);
+    logger.info('恭喜！在 ' + dest + ' 成功诞生了一个新的blog');
 });

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ericzhang-cn/papery.png)](https://travis-ci.org/ericzhang-cn/papery])
+[![Build Status](https://travis-ci.org/ericzhang-cn/papery.png)](https://travis-ci.org/ericzhang-cn/papery)
 
 papery - create your simple, fast & elegant blog with plain text.
 

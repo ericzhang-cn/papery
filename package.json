@@ -1,8 +1,8 @@
 {
   "name": "papery",
-  "version": "0.1.8-1",
+  "version": "0.1.8-2",
   "description": "create your simple, fast & elegant blog with plain text",
-  "bin" : {
+  "bin": {
       "pap-create": "./bin/papery-create.js",
       "pap-build":  "./bin/papery-build.js",
       "pap-server": "./bin/papery-server.js"
@@ -17,8 +17,12 @@
     "ncp":        ">=0.4.2",
     "connect":    ">=2.8.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": ">=1.12.0",
+    "chai":  ">=1.7.2"
+  },
   "scripts": {
+    "test": "mocha ./test/tests.js -R Spec"
   },
   "repository": {
     "type": "git",

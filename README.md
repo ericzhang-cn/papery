@@ -51,7 +51,7 @@ npm update -g
 
 ## 命令行工具
 
-安装papery后，则可以通过命令行工具创建、构建及调试博客。papery包含pap-create，pap-build和pap-server三个命令。
+安装papery后，则可以通过命令行工具创建、构建及调试博客。
 
 ### pap-create
 

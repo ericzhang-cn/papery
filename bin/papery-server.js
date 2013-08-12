@@ -28,4 +28,4 @@ connect.createServer(
     connect.static(args[1])
 ).listen(8001);
 
-logger.info('server已启动，请通过http://localhost:8001/访问您的blog');
+logger.info('Server started at http://localhost:8001/');

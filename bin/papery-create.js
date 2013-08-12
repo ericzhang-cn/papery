@@ -27,7 +27,7 @@ if (!checkArgs(args)) {
 
 var startup = __dirname + '/../startup';
 if (!fs.existsSync(startup)) {
-    logger.error('找不到startup模板，重新安装papery可修复此问题');
+    logger.error('Startup templates can not be fount! Please reinstall your papery');
     process.exit(1);
 }
 
@@ -36,10 +36,10 @@ var src = startup,
 
 ncp(src, dest, function (err) {
     if (err) {
-        logger.error('无法创建blog');
+        logger.error('Create blog failed!');
         logger.error(err);
         process.exit(1);
     }
 
-    logger.info('恭喜！在 ' + dest + ' 成功诞生了一个新的blog');
+    logger.info('Woo! A new blog was born in ' + output);
 });

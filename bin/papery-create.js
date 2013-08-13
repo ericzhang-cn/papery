@@ -41,5 +41,5 @@ ncp(src, dest, function (err) {
         process.exit(1);
     }
 
-    logger.info('Woo! A new blog was born in ' + output);
+    logger.info('Woo! A new blog was born in ' + dest);
 });

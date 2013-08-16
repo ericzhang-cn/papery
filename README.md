@@ -295,17 +295,17 @@ papery通过在模板文件中引入不同的模板片段启用不同插件。�
 
 ### header\_plugin
 
-header\_plugin的模板文件为templates/inc/header_plugin.ejs。这个文件的内容会被包含到网站所有页面的head部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。如皮肤主题需要的额外css。
+header\_plugin的模板文件为templates/inc/header\_plugin.ejs。这个文件的内容会被包含到网站所有页面的head部分内。可以用于引入一些在页面主内容加载前需要引入的css、js等。如皮肤主题需要的额外css。
 
 ### footer\_plugin
 
-footer\_plugin的模板文件为templates/inc/footer_plugin.ejs。这个文件的内容会被包含到网站所有页面的body部分结束前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如网站统计代码。
+footer\_plugin的模板文件为templates/inc/footer\_plugin.ejs。这个文件的内容会被包含到网站所有页面的body部分结束前。可以用于引入一些在页面主内容加载后需要引入的css、js等。如网站统计代码。
 
 papery默认启用的mathjax插件在这里引入。
 
 ### article\_footer\_plugin
 
-article\_footer\_plugin的模板文件为templates/inc/article\_footer_plugin.ejs。这个文件的内容被包含到所有文章页面的底部。可以用于引入评论、分享等于文章相关的插件。
+article\_footer\_plugin的模板文件为templates/inc/article\_footer\_plugin.ejs。这个文件的内容被包含到所有文章页面的底部。可以用于引入评论、分享等于文章相关的插件。
 
 如上述位置不满足需求，用户也可以通过自定义模板方式自己定制页面。
 
@@ -340,3 +340,33 @@ article\_footer\_plugin的模板文件为templates/inc/article\_footer_plugin.ej
 + 苏剑涛的Blog - http://www.sujiantao.com
 
 如果你也使用了papery并且想出现在这里，请[联系我](mailto:ericzhang.buaa@gmail.com)
+
+# License
+
+Copyright (c) 2013, Eric Zhang
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+  Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+
+  Neither the name of the {organization} nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

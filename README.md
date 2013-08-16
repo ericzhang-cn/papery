@@ -18,7 +18,7 @@ pap-build all myblog
 pap-server myblog
 ```
 
-在浏览器中输入http://localhost:8001/即可访问
+在浏览器中输入 http://localhost:8001/ 即可访问
 
 # papery的特点
 
@@ -88,7 +88,7 @@ pap-server可以在本地启动一个调试服务器用于快速预览和调试�
 pap-server blog_root_directory
 ```
 
-执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入http://localhost:8001/即可访问。
+执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入 http://localhost:8001/ 即可访问。
 
 ## 目录结构
 
@@ -338,6 +338,7 @@ article\_footer\_plugin的模板文件为templates/inc/article\_footer\_plugin.e
 
 + CodingLabs - http://blog.codinglabs.org
 + 苏剑涛的Blog - http://www.sujiantao.com
++ 吃肉熊猫 - http://freepander.github.io
 
 如果你也使用了papery并且想出现在这里，请[联系我](mailto:ericzhang.buaa@gmail.com)
 
@@ -349,16 +350,16 @@ All rights reserved.
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 
-  Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
 
-  Redistributions in binary form must reproduce the above copyright notice, this
-  list of conditions and the following disclaimer in the documentation and/or
-  other materials provided with the distribution.
+Redistributions in binary form must reproduce the above copyright notice, this
+list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
 
-  Neither the name of the {organization} nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
+Neither the name of the {organization} nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED

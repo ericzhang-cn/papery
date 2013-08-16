@@ -1,6 +1,6 @@
 {
   "name": "papery",
-  "version": "0.1.8-5",
+  "version": "0.1.8-6",
   "description": "create your simple, fast & elegant blog with plain text",
   "bin": {
       "pap-create": "./bin/papery-create.js",

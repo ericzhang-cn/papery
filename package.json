@@ -1,6 +1,6 @@
 {
   "name": "papery",
-  "version": "0.1.9-1",
+  "version": "0.1.9-2",
   "description": "create your simple, fast & elegant blog with plain text",
   "bin": {
       "pap-create": "./bin/papery-create.js",
@@ -29,6 +29,6 @@
     "url": "git://github.com/ericzhang-cn/papery.git"
   },
   "author": "Eric Zhang",
-  "license": "BSD",
+  "license": "MIT",
   "readmeFilename": "README.md"
 }

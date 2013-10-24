@@ -6,7 +6,7 @@ var _ = require('underscore'),
 var cmds = ['index', 'rss', 'tag', 'pages', 'articles', 'all'];
 
 var showUsage = function () {
-    console.log('usage: papery-build command [blog_root_directory]');
+    console.log('usage: pap-build command [blog_root_directory]');
     console.log('commands:');
     console.log('  help     - show help');
     console.log('  index    - build index.html');

@@ -8,7 +8,7 @@ var log4js = require('log4js'),
     logger = log4js.getLogger();
 
 var showUsage = function () {
-    console.log('usage: papery-create blog_root_directory');
+    console.log('usage: pap-create blog_root_directory');
 };
 
 var checkArgs = function (args) {

@@ -19,7 +19,7 @@ li {
 h1, h2, h3, h4 {
 }
 pre.prettyprint {
-	font-size: 12px;
+    font-size: 12px;
 }
 div#header {
     background-color: #0099CC;
@@ -71,20 +71,20 @@ div#article-content p.picture {
     text-align: center;
 }
 div#article-content h1 {
-	background-color: #999999;
-	color: #FFFFFF;
-	padding: 2px;
+    background-color: #999999;
+    color: #FFFFFF;
+    padding: 2px;
 }
 div#article-content h2 {
-	border-bottom: 1px dashed #666666;
+    border-bottom: 1px dashed #666666;
 }
 div#article-content h3 {
 }
 div#article-content blockquote {
     margin-left: 5px;
     padding-left: 30px;
-	border-left: 5px solid #0099CC;
-	font-size: 14px;
+    border-left: 5px solid #0099CC;
+    font-size: 14px;
 }
 div#article-meta {
     color: #999999;

@@ -198,21 +198,19 @@ papery默认的导航菜单项只有“首页”和“标签”。如果要增�
 ## 代码高亮
 papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)实现。
 
-只需将在元文本中插入class为prettyprint的pre标签，如：
+插入代码时使用gfm格式，用“```[lang]”开头，并用“```”结尾，如：
 
-```html
-<pre class="prettyprint linenums">
-#include&lt;stdio.h&gt;
+```bash
+```c
+#include <stdio.h>
 
 int main(int argc, char** argv) {
     printf("%s\n", "Hello, World!");
 }
-</pre>
+```
 ```
 
-即可实现代码高亮，代码语言会自动被识别。
-
-注意代码内的“<”，“>”和“&”要做html escape。
+即可实现代码高亮。
 
 papery自带两种代码高亮风格，分别是“night”和“light”。默认为“night”，可以在site.yml的“codetheme”中配置。
 

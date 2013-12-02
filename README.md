@@ -201,13 +201,13 @@ papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code
 插入代码时使用gfm格式，用“\`\`\`[lang]”开头，并用“\`\`\`”结尾，如：
 
 ```bash
-```c
+\`\`\`c
 #include <stdio.h>
 
 int main(int argc, char** argv) {
     printf("%s\n", "Hello, World!");
 }
-```
+\`\`\`
 ```
 
 即可实现代码高亮。

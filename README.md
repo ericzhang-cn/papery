@@ -198,7 +198,7 @@ papery默认的导航菜单项只有“首页”和“标签”。如果要增�
 ## 代码高亮
 papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)实现。
 
-插入代码时使用gfm格式，用“```[lang]”开头，并用“```”结尾，如：
+插入代码时使用gfm格式，用“\`\`\`[lang]”开头，并用“\`\`\`”结尾，如：
 
 ```bash
 ```c

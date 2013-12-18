@@ -7,14 +7,14 @@
         <lastBuildDate><%= site.rss.lastBuildDate %></lastBuildDate>
         <language><%= site.rss.lang %></language>
         <% site.rss.items.forEach(function (item) { %>
-        <item> 
-            <title><%= item.title %></title> 
-            <link><%= item.link %></link> 
-            <guid><%= item.guid %></guid> 
-            <author><%= item.author %></author> 
-            <pubDate><%= item.pubDate %></pubDate> 
-            <description><%= item.description %></description> 
-        </item> 
+        <item>
+            <title><%= item.title %></title>
+            <link><%= item.link %></link>
+            <guid><%= item.guid %></guid>
+            <author><%= item.author %></author>
+            <pubDate><%= item.pubDate %></pubDate>
+            <description><%= item.description %></description>
+        </item>
         <% }) %>
     </channel>
 </rss>

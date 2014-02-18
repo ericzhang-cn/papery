@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
-var _ = require('underscore'),
-    compiler = require('../lib/compiler');
+/**
+ * 编译整个站点
+ */
+
+var _ = require('underscore');
+var compiler = require('../lib/compiler');
 
 var cmds = ['index', 'rss', 'tag', 'pages', 'articles', 'all'];
 

@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-var _ = require('underscore'),
-    fs = require('fs'),
-    ncp = require('ncp').ncp;
+/**
+ * 生成一个新的papery站点
+ */
 
-var log4js = require('log4js'),
-    logger = log4js.getLogger();
+var _ = require('underscore');
+var fs = require('fs');
+var ncp = require('ncp').ncp;
+var log4js = require('log4js');
+var logger = log4js.getLogger();
 
 var showUsage = function () {
     console.log('usage: pap-create blog_root_directory');
@@ -27,7 +30,7 @@ if (!checkArgs(args)) {
 
 var startup = __dirname + '/../startup';
 if (!fs.existsSync(startup)) {
-    logger.error('Startup templates can not be fount! Please reinstall your papery');
+    logger.error('Startup templates can not be found! Please reinstall your papery');
     process.exit(1);
 }
 

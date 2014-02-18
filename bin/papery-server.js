@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-var _ = require('underscore'),
-    connect = require('connect');
+/**
+ * 在本地8001端口启动一个调试服务器
+ */
 
-var log4js = require('log4js'),
-    logger = log4js.getLogger();
+var _ = require('underscore');
+var connect = require('connect');
+var log4js = require('log4js');
+var logger = log4js.getLogger();
 
 var showUsage = function () {
     console.log('usage: pap-server blog_root_directory');

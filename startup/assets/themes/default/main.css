@@ -1,9 +1,10 @@
+/* 基础而通用的样式 */
 body {
-    font-family: arial,sans-serif; 
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
 a {
     text-decoration: none;
-    color: #0099CC;
+    color: #08c;
 }
 a:hover {
     text-decoration: underline;
@@ -11,18 +12,29 @@ a:hover {
 p {
     font-size: 16px;
     line-height: 1.8em;
-    color: #333333;
+    color: #5a5a5a;
 }
 li {
     line-height: 1.8em;
 }
 h1, h2, h3, h4 {
+    font-weight: normal;
 }
+
+/* 为代码块定义的样式 */
 pre.prettyprint {
-    font-size: 12px;
+    font-family: Monaco,Consolas,Monospace,'Lucida Console','Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New','宋体';
+    font-size: 14px;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
 }
+pre.prettyprint ol {
+    margin: 0;
+}
+
+/* 页面头部 */
 div#header {
-    background-color: #0099CC;
+    background-color: #2a3440;
     height: 50px;
 }
 div#header-inner {
@@ -37,16 +49,17 @@ div#main-inner {
 div#title a {
     font-weight: bold;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #fff;
 }
 div#subtitle {
-    color: #FFFFFF;
+    color: rgba(255,255,255,.5);
     font-weight: bold;
     font-size: 11px;
-    color: #FFFFFF;
 }
+
+/* 页面底部 */
 div#footer-inner {
-    border-top: 1px solid #0099CC;
+    border-top: 1px solid #5a5a5a;
     width: 1024px;
     margin: 20px auto 0;
 }
@@ -54,57 +67,56 @@ div#footer-inner p {
     text-align: right;
     font-size: 14px;
 }
-div#footer-inner p#icp a {
-    color: #999999;
-}
+
+/* 文章页面 */
 div#article-title {
     margin: 18px 0;
     font-size: 30px;
-    font-weight: bold;
-    border-left: 6px solid #CCCCCC;
+    border-left: 6px solid #ccc;
     padding-left: 12px;
 }
 div#article-title a {
-    color: #333333;
+    color: #2a2a2a;
 }
 div#article-content p.picture {
     text-align: center;
 }
-div#article-content h1 {
-    background-color: #999999;
-    color: #FFFFFF;
-    padding: 2px;
-}
-div#article-content h2 {
-    border-bottom: 1px dashed #666666;
-}
-div#article-content h3 {
+div#article-content h1,
+                    h2,
+                    h3 {
+    color: #2a2a2a;
 }
 div#article-content blockquote {
     margin-left: 5px;
     padding-left: 30px;
-    border-left: 5px solid #0099CC;
+    border-left: 5px solid #ccc;
     font-size: 14px;
 }
+div#article-content li {
+    margin: 7px 0;
+    color: #5a5a5a;
+}
 div#article-meta {
-    color: #999999;
+    color: #999;
     padding: 6px 0;
 }
 div.article-block {
-    border-top: 1px dashed #CCCCCC;
+    border-top: 1px dashed #ccc;
 }
 div.article-block p.title {
     font-size: 24px;
-    font-weight: bold;
+}
+div.article-block p.title a {
+    color:#333;
 }
 div.article-block p.meta {
     text-align: right;
-    color: #999999;
+    color: #999;
 }
 div.article-block a.tag {
     margin-right: 6px;
-    background-color: #0099CC;
-    color: #FFFFFF;
+    background-color: #999;
+    color: #fff;
     padding: 3px;
     font-size: 14px;
 }
@@ -113,41 +125,38 @@ div#aboutme {
 }
 div#aboutme p {
     font-size: 14px;
-    font-weight: bold;
-    color: #666666;
+    color: #666;
 }
 div#rss {
-    border-bottom: 1px dashed #CCCCCC;
+    border-bottom: 1px dashed #ccc;
     margin: 20px auto;
     text-align: right;
 }
-pre.prettyprint {
-    padding: 10px 20px;
-    font-family: Monaco,Consolas,'Lucida Console','Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New','宋体';
-}
+
+/* 标签配置 */
 div#tag-cloud {
-    border: 1px dashed #CCCCCC;
+    border: 1px dashed #ccc;
     margin: 20px 0;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
 }
 div#tag-cloud a {
     margin: 6px;
     display: block;
     float: left;
-    background-color: #0099CC;
-    color: #FFFFFF;
+    background-color: #2a3440;
+    color: #fff;
     padding: 3px;
     font-size: 14px;
 }
 div#tag-cloud a .count {
-    color: #FFCC00;
+    color: rgba(255,255,255,.5);
     font-size: 12px;
 }
 div#tag-index h1 {
-    border-bottom: 1px dashed #CCCCCC;
+    border-bottom: 1px dashed #ccc;
 }
 div#tag-index h1 a {
-    color: #666666;
+    color: #2a2a2a;
     font-size: 24px;
 }
 div#article-tags {
@@ -155,11 +164,13 @@ div#article-tags {
 }
 div#article-tags a.tag {
     margin-right: 6px;
-    background-color: #0099CC;
+    background-color: #999;
     color: #FFFFFF;
     padding: 3px;
     font-size: 14px;
 }
+
+/* 导航栏 */
 div#topnav ul {
     margin: 0;
     padding: 0;
@@ -171,8 +182,9 @@ div#topnav ul li {
 }
 div#topnav ul li a {
     display: block;
+    color: #2a3440;
 }
 div#topnav ul li.sep {
-    color: #CCCCCC;
+    color: #ccc;
     margin: 0 12px;
 }

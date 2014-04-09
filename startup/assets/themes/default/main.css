@@ -38,12 +38,14 @@ div#header {
     height: 50px;
 }
 div#header-inner {
-    width: 1024px;
+    width: 90%;
+    max-width: 1024px;
     margin: 0 auto;
     padding-top: 2px;
 }
 div#main-inner {
-    width: 1024px;
+    width: 90%;
+    max-width: 1024px;
     margin: 0 auto;
 }
 div#title a {
@@ -60,7 +62,8 @@ div#subtitle {
 /* 页面底部 */
 div#footer-inner {
     border-top: 1px solid #5a5a5a;
-    width: 1024px;
+    width: 90%;
+    max-width: 1024px;
     margin: 20px auto 0;
 }
 div#footer-inner p {
@@ -147,6 +150,7 @@ div#tag-cloud a {
     color: #fff;
     padding: 3px;
     font-size: 14px;
+    line-height: 1.2em;
 }
 div#tag-cloud a .count {
     color: rgba(255,255,255,.5);

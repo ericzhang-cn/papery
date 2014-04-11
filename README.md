@@ -53,7 +53,7 @@ pap-create命令用于创建一个新的博客，使用方法为：
 pap-create blog_root_directory
 ```
 
-执行后则会在blog_root_directory目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等你内容。详细信息会在下文详述。
+执行后则会在blog_root_directory目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等内容。详细信息会在下文详述。
 
 ### pap-build
 通过pap-create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。pap-build用于根据配置和元文本生成web内容。使用方法为：

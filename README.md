@@ -12,9 +12,9 @@ npm install -g papery
 创建博客
 
 ```bash
-pap-create myblog
-pap-build all myblog
-pap-server myblog
+papery create myblog
+papery build myblog
+papery server myblog
 ```
 
 在浏览器中输入 http://localhost:8001/ 即可访问
@@ -43,39 +43,29 @@ npm install -g papery
 npm update -g
 ```
 
-## 命令行工具
-安装papery后，则可以通过命令行工具创建、构建及调试博客。
+## 命令列表
 
-### pap-create
-pap-create命令用于创建一个新的博客，使用方法为：
+### create
+create命令用于创建一个新的博客，使用方法为：
 
 ```bash
-pap-create blog_root_directory
+papery create root
 ```
 
-执行后则会在blog_root_directory目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等内容。详细信息会在下文详述。
+执行后则会在root目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等内容。详细信息会在下文详述。
 
-### pap-build
-通过pap-create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。pap-build用于根据配置和元文本生成web内容。使用方法为：
+### build
+通过create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。build用于根据配置和元文本生成web内容。使用方法为：
 
 ```bash
-pap-build cmd blog_root_directory
+papery build root
 ```
 
-其中cmd列表如下：
-
-+ all - 构建所有页面
-+ index - 只构建index.html
-+ tag - 只构建tag.html
-+ rss - 只构建rss.xml
-+ pages - 只构建pages/目录下的内容
-+ articles - 只构建articles/下的内容
-
-### pap-server
-pap-server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
+### server
+server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
 
 ```bash
-pap-server blog_root_directory
+papery server root
 ```
 
 执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入 http://localhost:8001/ 即可访问。
@@ -112,7 +102,7 @@ root
 站点的总配置文件是site.yml。papery使用[yaml](http://www.yaml.org/)格式作为配置文件格式。
 由于yaml的配置格式非常简洁且具有较高的自解释能力，因此即使你没接触过yaml也可以很快理解配置的意义。
 
-通过pap-create创建的默认site.yml内容如下：
+通过create创建的默认site.yml内容如下：
 
 ```yaml
 title: 博客标题

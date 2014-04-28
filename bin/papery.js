@@ -52,3 +52,4 @@ var cmd = args[1];
 var options = _.last(args, args.length - 2);
 
 runners[cmd].run(options);
+

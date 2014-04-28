@@ -8,7 +8,7 @@ var log4js = require('log4js');
 var logger = log4js.getLogger();
 
 function _help () {
-    console.log('usage: papery server <root> <port>');
+    console.log('usage: papery server <root> <[port]>');
     console.log('  root - Root directory of blog');
     console.log('  port - Port to start web server, must greater than 3000, default is 8001');
 }

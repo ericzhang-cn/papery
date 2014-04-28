@@ -290,12 +290,17 @@ article\_footer\_plugin的模板文件为templates/inc/article\_footer\_plugin.e
 + 量子恒道 - http://www.linezing.com
 + 腾讯分析 - http://ta.qq.com
 
-# 谁在使用papery
-+ CodingLabs - http://blog.codinglabs.org
-+ 苏剑涛的Blog - http://www.sujiantao.com
-+ 吃肉熊猫 - http://freepander.github.io
+# 开发
+## 代码库
+```bash
+git clone https://github.com/ericzhang-cn/papery.git
+```
 
-如果你也使用了papery并且想出现在这里，请[联系我](mailto:ericzhang.buaa@gmail.com)
+## 运行单元测试
+```bash
+cd papery
+npm test
+```
 
 # License
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)

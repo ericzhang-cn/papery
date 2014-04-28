@@ -4,7 +4,7 @@
 
 var _ = require('underscore');
 var fs = require('fs');
-var ncp = require('ncp').ncp;
+var fse = require('fs-extra');
 var log4js = require('log4js');
 var logger = log4js.getLogger();
 
@@ -34,14 +34,8 @@ exports.run = function (options) {
 
     var src = startup;
     var dest = root;
-    ncp(src, dest, function (err) {
-        if (err) {
-            logger.error('Create blog failed!');
-            logger.error(err);
-            process.exit(1);
-        }
+    fse.copySync(src, dest);
 
-        logger.info('Woo! A new blog was born in ' + dest);
-    });
+    logger.info('Woo! A new blog was born in ' + dest);
 };
 

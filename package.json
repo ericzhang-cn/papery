@@ -1,6 +1,6 @@
 {
   "name": "papery",
-  "version": "0.2.0-1",
+  "version": "0.2.1-1",
   "description": "create your simple, fast & elegant blog with plain text",
   "bin": {
       "papery": "./bin/papery.js"
@@ -12,8 +12,8 @@
     "js-yaml":    ">=2.1.0",
     "ejs":        ">=0.8.4",
     "log4js":     ">=0.6.7",
-    "ncp":        ">=0.4.2",
-    "connect":    ">=2.8.5"
+    "connect":    ">=2.8.5",
+    "fs-extra":   ">=0.8.1"
   },
   "devDependencies": {
     "mocha": ">=1.12.0",

@@ -49,7 +49,7 @@ npm update -g
 create命令用于创建一个新的博客，使用方法为：
 
 ```bash
-papery create root
+papery create <root>
 ```
 
 执行后则会在root目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等内容。详细信息会在下文详述。
@@ -58,17 +58,17 @@ papery create root
 通过create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。build用于根据配置和元文本生成web内容。使用方法为：
 
 ```bash
-papery build root
+papery build <root>
 ```
 
 ### server
 server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
 
 ```bash
-papery server root
+papery server <root> <[port]>
 ```
 
-执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入 http://localhost:8001/ 即可访问。
+执行上述命令将在本地port指定的端口启动一个webserver，其中port为可选项，默认值为8001。在浏览器中输入 http://localhost:<port>/ 即可访问。
 
 ## 目录结构
 一个papery博客的目录结构如下

@@ -28,23 +28,24 @@ var showHelp = function (cmd) {
 };
 
 var checkArgs = function (args) {
-    if (args.length < 2) {
+    if (args.length <= 2) {
+        showUsage();
         return false;
     }
 
-    if ((args[1] !== 'help') && (! _.contains(cmds, args[1]))) {
+    if ((args[1] === 'help') && (! _.contains(cmds, args[1]))) {
+        showHelp(args[2]);
         return false;
     }
 
     return true;
 };
 
-var args = (process.argv[0] === 'papery' || process.argv[0] === 'papery.js')
-         ? process.argv
-         : _.last(process.argv, process.argv.length - 1);
+var args = (process.argv[0] === 'node' || process.argv[0] === 'nodejs')
+         ? _.last(process.argv, process.argv.length - 1)
+         : process.argv;
 
-if (!checkArgs(args)) {
-    showUsage();
+if (checkArgs(args) === false) {
     process.exit(1);
 }
 

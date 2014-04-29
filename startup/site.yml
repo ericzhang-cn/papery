@@ -15,7 +15,7 @@ master:
 rss:
   title: RSS feed title
   desc: RSS feed description
-  lang: RSS feed language (ex: zh-cn)
+  lang: zh-cn
   max: 10
 copyright:
   owner: Copyrighter

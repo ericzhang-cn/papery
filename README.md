@@ -12,9 +12,9 @@ npm install -g papery
 创建博客
 
 ```bash
-pap-create myblog
-pap-build all myblog
-pap-server myblog
+papery create myblog
+papery build myblog
+papery server myblog
 ```
 
 在浏览器中输入 http://localhost:8001/ 即可访问
@@ -43,42 +43,32 @@ npm install -g papery
 npm update -g
 ```
 
-## 命令行工具
-安装papery后，则可以通过命令行工具创建、构建及调试博客。
+## 命令列表
 
-### pap-create
-pap-create命令用于创建一个新的博客，使用方法为：
-
-```bash
-pap-create blog_root_directory
-```
-
-执行后则会在blog_root_directory目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等你内容。详细信息会在下文详述。
-
-### pap-build
-通过pap-create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。pap-build用于根据配置和元文本生成web内容。使用方法为：
+### create
+create命令用于创建一个新的博客，使用方法为：
 
 ```bash
-pap-build cmd blog_root_directory
+papery create <root>
 ```
 
-其中cmd列表如下：
+执行后则会在root目录创建一个全新的博客，里面包含papery博客的基本目录结构及配置文件等内容。详细信息会在下文详述。
 
-+ all - 构建所有页面
-+ index - 只构建index.html
-+ tag - 只构建tag.html
-+ rss - 只构建rss.xml
-+ pages - 只构建pages/目录下的内容
-+ articles - 只构建articles/下的内容
-
-### pap-server
-pap-server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
+### build
+通过create创建的博客还不能成为一个真正可以访问的网站，因为里面只包含配置信息和元文本，还没有web页面。build用于根据配置和元文本生成web内容。使用方法为：
 
 ```bash
-pap-server blog_root_directory
+papery build <root>
 ```
 
-执行上述命令将在本地8001端口启动一个webserver，在浏览器中输入 http://localhost:8001/ 即可访问。
+### server
+server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
+
+```bash
+papery server <root> <[port]>
+```
+
+执行上述命令将在本地port指定的端口启动一个webserver，其中port为可选项，默认值为8001。在浏览器中输入 http://localhost:<port>/ 即可访问。
 
 ## 目录结构
 一个papery博客的目录结构如下
@@ -112,33 +102,32 @@ root
 站点的总配置文件是site.yml。papery使用[yaml](http://www.yaml.org/)格式作为配置文件格式。
 由于yaml的配置格式非常简洁且具有较高的自解释能力，因此即使你没接触过yaml也可以很快理解配置的意义。
 
-通过pap-create创建的默认site.yml内容如下：
+通过create创建的默认site.yml内容如下：
 
 ```yaml
-title: 博客标题
-subtitle: 博客副标题
-link: 博客URL
+title: Title of blog
+subtitle: Subtitle of blog
+link: Homepage link
 meta:
-  description: 页面meta中的description
+  description: Content of description meta tag
   keywords: !!seq
-    - 关键词1
-    - 关键词2
-    - 关键词3
-  author: 页面meta中的author
+    - keyword1
+    - keyword2
+    - keyword3
+  author: Content of author meta tag
 master:
-  name: 博客主
-  about: 个人简介
-  email: 邮箱
+  name: Your name
+  about: Introduce yourself here
+  email: Your E-mail
 rss:
-  title: RSS源标题
-  desc: RSS源描述
-  lang: zh-cn
+  title: RSS feed title
+  desc: RSS feed description
+  lang: RSS feed language (ex: zh-cn)
   max: 10
 copyright:
-  owner: 版权所有方
+  owner: Copyrighter
   beginYear: 2011
   endYear: 2013
-  ICP: 备案号
 theme: default
 codetheme: night
 ```
@@ -198,21 +187,19 @@ papery默认的导航菜单项只有“首页”和“标签”。如果要增�
 ## 代码高亮
 papery内置代码高亮支持，高亮通过[Google Code Prettify](https://code.google.com/p/google-code-prettify/)实现。
 
-只需将在元文本中插入class为prettyprint的pre标签，如：
+插入代码时使用gfm格式，用“\`\`\`[lang]”开头，并用“\`\`\`”结尾，如：
 
-```html
-<pre class="prettyprint linenums">
-#include&lt;stdio.h&gt;
+<pre>
+```c
+#include <stdio.h>
 
 int main(int argc, char** argv) {
     printf("%s\n", "Hello, World!");
 }
-</pre>
 ```
+</pre>
 
-即可实现代码高亮，代码语言会自动被识别。
-
-注意代码内的“<”，“>”和“&”要做html escape。
+即可实现代码高亮。
 
 papery自带两种代码高亮风格，分别是“night”和“light”。默认为“night”，可以在site.yml的“codetheme”中配置。
 
@@ -302,12 +289,17 @@ article\_footer\_plugin的模板文件为templates/inc/article\_footer\_plugin.e
 + 量子恒道 - http://www.linezing.com
 + 腾讯分析 - http://ta.qq.com
 
-# 谁在使用papery
-+ CodingLabs - http://blog.codinglabs.org
-+ 苏剑涛的Blog - http://www.sujiantao.com
-+ 吃肉熊猫 - http://freepander.github.io
+# 开发
+## 代码库
+```bash
+git clone https://github.com/ericzhang-cn/papery.git
+```
 
-如果你也使用了papery并且想出现在这里，请[联系我](mailto:ericzhang.buaa@gmail.com)
+## 运行单元测试
+```bash
+cd papery
+npm test
+```
 
 # License
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)

@@ -1,13 +1,13 @@
 这是一段代码
 ===========
 
-<pre class="prettyprint">
-#include&lt;stdio.h&gt;
+```c
+#include <stdio.h>
 
 int main(int argc, char** argv) {
     printf("%s\n", "Hello, World!");
 }
-</pre>
+```
 
 这是一些数学公式
 ===============

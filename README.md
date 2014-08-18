@@ -223,7 +223,7 @@ papery默认启用[MathJax](http://www.mathjax.org/)插件，因此直接支持L
 ```
 
 ## TOC
-在文中任何未知插入
+在文中任何位置插入
 
 ```html
 <!-- toc -->

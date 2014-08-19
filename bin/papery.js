@@ -33,7 +33,7 @@ var checkArgs = function (args) {
         return false;
     }
 
-    if ((args[1] === 'help') && (! _.contains(cmds, args[1]))) {
+    if ((args[1] === 'help') && (!_.contains(cmds, args[1]))) {
         showHelp(args[2]);
         return false;
     }
@@ -41,9 +41,9 @@ var checkArgs = function (args) {
     return true;
 };
 
-var args = (process.argv[0] === 'node' || process.argv[0] === 'nodejs')
-         ? _.last(process.argv, process.argv.length - 1)
-         : process.argv;
+var args = !(process.argv[0] === 'node' ||
+    process.argv[0] === 'nodejs' ||
+    process.argv[0].match(/node.exe$/)) ? process.argv : _.last(process.argv, process.argv.length - 1);
 
 if (checkArgs(args) === false) {
     process.exit(1);

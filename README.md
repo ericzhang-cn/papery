@@ -31,7 +31,9 @@ papery server myblog
 
 # 使用说明
 ## 安装及升级
-首先要保证机器上安装有[nodejs](http://nodejs.org/)及[npm](https://npmjs.org/)。
+首先要保证机器上安装有[NodeJS](http://nodejs.org/)及[npm](https://npmjs.org/)。
+
+NodeJs版本需要>=0.10。
 
 ### 安装
 ```bash

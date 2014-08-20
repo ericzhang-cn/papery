@@ -46,7 +46,6 @@ npm update -g
 ```
 
 ## 命令列表
-
 ### create
 create命令用于创建一个新的博客，使用方法为：
 
@@ -67,7 +66,7 @@ papery build <root>
 server可以在本地启动一个调试服务器用于快速预览和调试内容，命令为：
 
 ```bash
-papery server <root> <[port]>
+papery server <root> [<port>]
 ```
 
 执行上述命令将在本地port指定的端口启动一个webserver，其中port为可选项，默认值为8001。在浏览器中输入 http://localhost:<port>/ 即可访问。
@@ -144,13 +143,13 @@ papery中的文章有两部分组成：文章配置及元文本。文章配置�
 
 ```yaml
 - id: post-id
-  title: 文章标题 
+  title: 文章标题
   postedOn: !!str 2013-01-01
   author: 作者
-  tags: 
+  tags:
     - 标签1
     - 标签2
-  abstract: 摘要内容 
+  abstract: 摘要内容
 ```
 
 注意其中最重要的配置项是id。id作为文章的唯一标识，要求在整个articles.yml配置的所有文章中唯一，并且只能包含小写英文字母、数字和中横“-”。

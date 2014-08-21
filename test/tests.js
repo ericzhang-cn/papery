@@ -58,8 +58,8 @@ describe('Papery', function () {
             ex(blogDir + '/rss.xml').should.to.be.true;
         });
         it('should build articles', function () {
-            ex(blogDir + '/articles/first-post.html').should.to.be.true;
-            ex(blogDir + '/articles/second-post.html').should.to.be.true;
+            ex(blogDir + '/articles/papery-quickstart.html').should.to.be.true;
+            ex(blogDir + '/articles/code-and-math.html').should.to.be.true;
         });
         it('should build pages', function () {
             ex(blogDir + '/pages/about-me.html').should.to.be.true;

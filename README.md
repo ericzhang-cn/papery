@@ -1,17 +1,12 @@
 [![Build Status](https://travis-ci.org/ericzhang-cn/papery.png)](https://travis-ci.org/ericzhang-cn/papery)
 
-papery - create your simple, fast & elegant blog with plain text.
+Papery - Create your simple, fast & elegant blog with plain text.
 
 # 一分钟生成自己的博客
-通过[npm](https://npmjs.org/)安装papery
 
 ```bash
 npm install -g papery
-```
 
-创建博客
-
-```bash
 papery create myblog
 papery build myblog
 papery server myblog
@@ -33,7 +28,7 @@ papery server myblog
 ## 安装及升级
 首先要保证机器上安装有[NodeJS](http://nodejs.org/)及[npm](https://npmjs.org/)。
 
-NodeJs版本需要>=0.10。
+NodeJs版本需要 >= 0.10。
 
 ### 安装
 ```bash

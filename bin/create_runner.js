@@ -9,8 +9,8 @@ var log4js = require('log4js');
 var logger = log4js.getLogger();
 
 function _help() {
-    console.log('usage: papery create <root>');
-    console.log('  root - Root directory of blog');
+    console.log('Usage: papery create <root>');
+    console.log('    root - Root directory of blog');
 }
 
 exports.help = function () {

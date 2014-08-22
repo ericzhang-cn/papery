@@ -6,8 +6,8 @@ var _ = require('underscore');
 var compiler = require('../lib/compiler');
 
 function _help() {
-    console.log('usage: papery build <root>');
-    console.log('  root - Root directory of blog');
+    console.log('Usage: papery build <root>');
+    console.log('    root - Root directory of blog');
 }
 
 exports.help = function () {

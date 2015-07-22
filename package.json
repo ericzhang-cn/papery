@@ -1,6 +1,6 @@
 {
   "name": "papery",
-  "version": "0.2.4-3",
+  "version": "0.2.4-4",
   "description": "create your simple, fast & elegant blog with plain text",
   "bin": {
       "papery": "./bin/papery.js"

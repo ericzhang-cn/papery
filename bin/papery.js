@@ -61,7 +61,7 @@ var checkArgs = function (args) {
 
 var args = !(process.argv[0] === 'node' ||
     process.argv[0] === 'nodejs' ||
-    process.argv[0].match(/node.exe$/)) ||
+    process.argv[0].match(/node.exe$/) ||
     process.argv[0].match(/node$/)) ? process.argv : _.last(process.argv, process.argv.length - 1);
 
 checkArgs(args);
